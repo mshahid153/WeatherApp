@@ -1,0 +1,213 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* Application container */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Background image */
+.app:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Light theme */
+.Light {
+  color: #000;
+  border-color: #000;
+}
+
+.Light:before {
+  background-image: url('./assets/sunset.jpg');
+}
+
+/* Dark theme */
+.Dark {
+  color: #fff;
+  border-color: #fff;
+}
+
+.Dark:before {
+  background-image: url('./assets/night.jpg');
+}
+
+/* Search bar */
+.search {
+  text-align: center;
+  padding: 4rem 0 1rem 0;
+}
+
+.app input {
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255, 0.8);
+  background: rgba(255,255,255, 0.1);
+  color: #f8f8f8;
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
+
+/* Button container */
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Button styles */
+.button {
+  padding: 0.5rem 1rem;
+  margin: 0 2rem;
+  border-radius: 5rem;
+  font-weight: 700;
+  border: 0;
+}
+
+/* Dark mode button */
+.Dark-button {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Light mode button */
+.Light-button {
+  background-color: rgba(80, 80, 80, 0.5);
+  color: #fff;
+}
+
+/* Weather data container */
+.container {
+  width: 100%;
+  max-width: 700px;
+  max-height: 600px;
+  margin: auto;
+  padding-bottom: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: scroll;
+}
+
+/* Individual weather card */
+.card {
+  border: 3px solid;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+}
+
+/* Error message */
+.error {
+  font-size: 2rem;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+/* Top section of weather card */
+.top {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Temperature */
+.temp {
+  font-size: 1.5rem;
+}
+
+/* Location name */
+.location {
+  font-size: 3rem;
+  padding: 0;
+  font-weight: 700;
+}
+
+/* Date and time */
+.date-time {
+  font-size: 1.5rem;
+}
+
+/* Description of weather */
+.description {
+  font-size: 2rem;
+  text-align: right;
+}
+
+/* Additional weather details */
+.bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255, 0.2);
+}
+
+.bottom p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .location {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .date-time {
+    font-size: 1.2rem;
+  }
+
+  .temp {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  .error {
+    font-size: 1.5rem;
+  }
+
+  .bottom p {
+    font-size: 1rem;
+  }
+}
